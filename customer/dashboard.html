@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Customer dashboard</title><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/customer.css"></head>
+<body data-customer-dashboard="true">
+  <aside class="sidebar" id="desktop-nav"><div class="sidebar-brand" data-restaurant-name></div>
+    <button class="nav-item active" data-view="home" aria-label="Home"><span data-icon="home"></span><span>Home</span></button>
+    <button class="nav-item" data-view="bills" aria-label="Bills"><span data-icon="receipt"></span><span>Bills</span></button>
+    <button class="nav-item" data-view="redeem" aria-label="Redeem"><span data-icon="gift"></span><span>Redeem</span></button>
+    <button class="nav-item" data-view="refer" aria-label="Refer"><span data-icon="users"></span><span>Refer</span></button>
+    <button class="nav-item" data-view="profile" aria-label="Profile"><span data-icon="user"></span><span>Profile</span></button>
+  </aside>
+  <main class="page customer-main"><header class="page-header"><p class="caption" data-restaurant-name></p><h1 class="page-title" data-page-title>Home</h1><p class="page-subtitle" data-page-subtitle></p></header><div id="customer-content"><div class="skeleton" style="height:180px;margin-bottom:16px"></div><div class="skeleton" style="height:120px"></div></div></main>
+  <nav class="bottom-nav" id="mobile-nav"><button class="nav-item active" data-view="home" aria-label="Home"><span data-icon="home"></span><span>Home</span></button><button class="nav-item" data-view="bills" aria-label="Bills"><span data-icon="receipt"></span><span>Bills</span></button><button class="nav-item" data-view="redeem" aria-label="Redeem"><span data-icon="gift"></span><span>Redeem</span></button><button class="nav-item" data-view="refer" aria-label="Refer"><span data-icon="users"></span><span>Refer</span></button><button class="nav-item" data-view="profile" aria-label="Profile"><span data-icon="user"></span><span>Profile</span></button></nav>
+  <div class="sheet-backdrop" id="bill-sheet"><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="bill-sheet-title"><div class="sheet-handle"></div><button class="icon-btn" data-close-sheet aria-label="Close bill details" style="float:right" data-icon="x"></button><h2 class="sheet-title" id="bill-sheet-title">Bill</h2><div id="bill-detail"></div></section></div>
+  <div class="sheet-backdrop" id="redeem-sheet"><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="redeem-sheet-title"><div class="sheet-handle"></div><button class="icon-btn" data-close-sheet aria-label="Close reward confirmation" style="float:right" data-icon="x"></button><h2 class="sheet-title" id="redeem-sheet-title">Redeem reward</h2><div id="redeem-detail"></div></section></div>
+  <div class="sheet-backdrop" id="share-sheet"><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="share-sheet-title"><div class="sheet-handle"></div><button class="icon-btn" data-close-sheet aria-label="Close share sheet" style="float:right" data-icon="x"></button><h2 class="sheet-title" id="share-sheet-title">Share</h2><p class="muted">Referral link ready.</p><div class="link-box" id="share-link"></div><button class="btn btn-primary" data-copy-referral>Copy link</button></section></div>
+  <div id="toast" class="toast"></div><script src="../js/icons.js"></script><script src="../js/utils.js"></script><script src="../js/mock-data.js"></script><script src="../js/store.js"></script><script src="../js/auth.js"></script><script src="../js/customer.js"></script><script>initCustomerDashboard();</script>
+</body>
+</html>
